@@ -12,10 +12,45 @@ import {MatListModule} from "@angular/material/list";
 import {MatExpansionModule} from "@angular/material/expansion";
 import {MatButtonModule} from "@angular/material/button";
 import {MatTooltipModule} from "@angular/material/tooltip";
+import {InputComponent} from "./input/input.component";
+import {AutocompleteComponent} from "./component/autocomplete/autocomplete.component";
+import {MenubarComponent} from "./component/menubar/menubar.component";
+import {HomeComponent} from "./component/home/home.component";
+import {CardComponent} from "./component/card/card.component";
+import {SliderComponent} from "./component/slider/slider.component";
+import {TableComponent} from "./component/table/table.component";
+import {FormdesignComponent} from "./component/formdesign/formdesign.component";
+import {PopupComponent} from "./component/popup/popup.component";
+import {AssociateComponent} from "./component/associate/associate.component";
+import {UserdetailComponent} from "./component/userdetail/userdetail.component";
+import {MatInputModule} from "@angular/material/input";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatCardModule} from "@angular/material/card";
+import {MatSelectModule} from "@angular/material/select";
+import {MatAutocompleteModule} from "@angular/material/autocomplete";
+import {MatBadgeModule} from "@angular/material/badge";
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatSliderModule} from "@angular/material/slider";
+import {MatTableModule} from "@angular/material/table";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatRadioModule} from "@angular/material/radio";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InputComponent,
+    AutocompleteComponent,
+    MenubarComponent,
+    HomeComponent,
+    CardComponent,
+    SliderComponent,
+    TableComponent,
+    FormdesignComponent,
+    PopupComponent,
+    AssociateComponent,
+    UserdetailComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +63,21 @@ import {MatTooltipModule} from "@angular/material/tooltip";
     MatListModule,
     MatExpansionModule,
     MatButtonModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatCardModule,
+    MatSelectModule,
+    MatAutocompleteModule,
+    MatBadgeModule,
+    MatDialogModule,
+    MatCheckboxModule,
+    MatSliderModule,
+    FormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatDatepickerModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
