@@ -36,6 +36,12 @@ import {MatTableModule} from "@angular/material/table";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatRadioModule} from "@angular/material/radio";
+import { ProductComponent } from './component/product/product/product.component';
+import { ManageProductComponent } from './component/product/manage-product/manage-product.component';
+import { CategoryComponent } from './component/category/category/category.component';
+import { ManageCategoryComponent } from './component/category/manage-category/manage-category.component';
+import { InvoiceComponent } from './component/invoice/invoice/invoice.component';
+import { ManageInvoiceComponent } from './component/invoice/manage-invoice/manage-invoice.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +56,13 @@ import {MatRadioModule} from "@angular/material/radio";
     FormdesignComponent,
     PopupComponent,
     AssociateComponent,
-    UserdetailComponent
+    UserdetailComponent,
+    ProductComponent,
+    ManageProductComponent,
+    CategoryComponent,
+    ManageCategoryComponent,
+    InvoiceComponent,
+    ManageInvoiceComponent
   ],
   imports: [
     BrowserModule,
