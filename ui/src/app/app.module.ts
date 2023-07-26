@@ -45,6 +45,8 @@ import { ManageInvoiceComponent } from './component/invoice/manage-invoice/manag
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {FlexModule} from "@angular/flex-layout";
 import {HttpClientModule} from "@angular/common/http";
+import {ConfirmationComponent} from "./component/confirmation/confirmation.component";
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 
 @NgModule({
   declarations: [
@@ -65,7 +67,8 @@ import {HttpClientModule} from "@angular/common/http";
     CategoryComponent,
     ManageCategoryComponent,
     InvoiceComponent,
-    ManageInvoiceComponent
+    ManageInvoiceComponent,
+    ConfirmationComponent
   ],
   imports: [
     BrowserModule,
@@ -95,7 +98,8 @@ import {HttpClientModule} from "@angular/common/http";
     MatDatepickerModule,
     MatRadioModule,
     MatSnackBarModule,
-    FlexModule
+    FlexModule,
+    MatSlideToggleModule
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]
