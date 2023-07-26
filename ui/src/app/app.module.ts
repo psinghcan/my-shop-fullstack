@@ -42,6 +42,9 @@ import { CategoryComponent } from './component/category/category/category.compon
 import { ManageCategoryComponent } from './component/category/manage-category/manage-category.component';
 import { InvoiceComponent } from './component/invoice/invoice/invoice.component';
 import { ManageInvoiceComponent } from './component/invoice/manage-invoice/manage-invoice.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {FlexModule} from "@angular/flex-layout";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -68,6 +71,7 @@ import { ManageInvoiceComponent } from './component/invoice/manage-invoice/manag
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatToolbarModule,
     MatIconModule,
     MatMenuModule,
@@ -89,9 +93,11 @@ import { ManageInvoiceComponent } from './component/invoice/manage-invoice/manag
     MatTableModule,
     MatPaginatorModule,
     MatDatepickerModule,
-    MatRadioModule
+    MatRadioModule,
+    MatSnackBarModule,
+    FlexModule
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
