@@ -38,11 +38,14 @@ import {ListCategoriesComponent} from "./components/categories/list-categories/l
 import {ManageCategoryComponent} from "./components/categories/manage-category/manage-category.component";
 import {ListInvoicesComponent} from "./components/invoices/list-invoices/list-invoices.component";
 import {ManageInvoiceComponent} from "./components/invoices/manage-invoice/manage-invoice.component";
+import {HomeComponent} from "./components/home/home.component";
+import {SidenavComponent} from "./components/sidenav/sidenav.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-
+    HomeComponent,
+    SidenavComponent,
     ListProductsComponent,
     ManageProductComponent,
     ListCategoriesComponent,
