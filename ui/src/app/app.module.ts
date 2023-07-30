@@ -12,17 +12,6 @@ import {MatListModule} from "@angular/material/list";
 import {MatExpansionModule} from "@angular/material/expansion";
 import {MatButtonModule} from "@angular/material/button";
 import {MatTooltipModule} from "@angular/material/tooltip";
-import {InputComponent} from "./input/input.component";
-import {AutocompleteComponent} from "./component/autocomplete/autocomplete.component";
-import {MenubarComponent} from "./component/menubar/menubar.component";
-import {HomeComponent} from "./component/home/home.component";
-import {CardComponent} from "./component/card/card.component";
-import {SliderComponent} from "./component/slider/slider.component";
-import {TableComponent} from "./component/table/table.component";
-import {FormdesignComponent} from "./component/formdesign/formdesign.component";
-import {PopupComponent} from "./component/popup/popup.component";
-import {AssociateComponent} from "./component/associate/associate.component";
-import {UserdetailComponent} from "./component/userdetail/userdetail.component";
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatCardModule} from "@angular/material/card";
@@ -36,36 +25,28 @@ import {MatTableModule} from "@angular/material/table";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatRadioModule} from "@angular/material/radio";
-import { ProductComponent } from './component/product/product/product.component';
-import { ManageProductComponent } from './component/product/manage-product/manage-product.component';
-import { CategoryComponent } from './component/category/category/category.component';
-import { ManageCategoryComponent } from './component/category/manage-category/manage-category.component';
-import { InvoiceComponent } from './component/invoice/invoice/invoice.component';
-import { ManageInvoiceComponent } from './component/invoice/manage-invoice/manage-invoice.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {FlexModule} from "@angular/flex-layout";
 import {HttpClientModule} from "@angular/common/http";
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { ListProductsComponent } from './components/products/list-products/list-products.component';
+import { ListCategoriesComponent } from './components/categories/list-categories/list-categories.component';
+import { ListInvoicesComponent } from './components/invoices/list-invoices/list-invoices.component';
+import {ManageProductComponent} from "./components/products/manage-product/manage-product.component";
+import {ManageCategoryComponent} from "./components/categories/manage-category/manage-category.component";
+import {ManageInvoiceComponent} from "./components/invoices/manage-invoice/manage-invoice.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    InputComponent,
-    AutocompleteComponent,
-    MenubarComponent,
-    HomeComponent,
-    CardComponent,
-    SliderComponent,
-    TableComponent,
-    FormdesignComponent,
-    PopupComponent,
-    AssociateComponent,
-    UserdetailComponent,
-    ProductComponent,
     ManageProductComponent,
-    CategoryComponent,
     ManageCategoryComponent,
-    InvoiceComponent,
-    ManageInvoiceComponent
+    ListInvoicesComponent,
+    ManageInvoiceComponent,
+    SidenavComponent,
+    ListProductsComponent,
+    ListCategoriesComponent,
+    ListInvoicesComponent
   ],
   imports: [
     BrowserModule,
