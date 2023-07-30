@@ -24,7 +24,7 @@ public class CategoryController {
         this.categoryMapper = categoryMapper;
     }
 
-    @GetMapping("")
+    @GetMapping("/all")
     public List<CategoryDto> getAllCategories() {
         return categoryRepository.findAll()
                 .stream()
