@@ -1,1 +1,23 @@
-<p>list-categories works!</p>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Id</th>
+    <th scope="col">Name</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let category of categories">
+
+    <td>
+      {{ category.id }}
+    </td>
+    <td>
+      {{ category.name }}
+    </td>
+    <td class="action-link">
+      <button routerLink='/manage-category/{{category.id}}'  class="btn btn-info">Manage</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

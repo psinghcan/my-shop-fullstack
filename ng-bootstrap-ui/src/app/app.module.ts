@@ -12,6 +12,8 @@ import { ManageCategoryComponent } from './components/manage-category/manage-cat
 import { ManageProductComponent } from './components/manage-product/manage-product.component';
 import { HomeComponent } from './components/home/home.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import {HttpClientModule} from "@angular/common/http";
+import { ToastComponent } from './components/toast/toast.component';
 
 @NgModule({
   declarations: [
@@ -23,11 +25,13 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     ManageCategoryComponent,
     ManageProductComponent,
     HomeComponent,
-    SidenavComponent
+    SidenavComponent,
+    ToastComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     NgbModule
   ],
   providers: [],
