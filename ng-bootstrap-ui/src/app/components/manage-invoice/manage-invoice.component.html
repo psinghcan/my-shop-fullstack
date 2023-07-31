@@ -1,1 +1,46 @@
-<p>manage-invoice works!</p>
+<form #userForm="ngForm">
+  <div class="form-group">
+    <label>Product Id</label>
+    <input type="text" name="name" readonly class="form-control" [(ngModel)]="invoice.id" required>
+  </div>
+  <div class="form-group">
+    <label>Contact Number</label>
+    <input type="text" class="form-control" name="contactNumber" [(ngModel)]="invoice.contactNumber" required>
+  </div>
+
+  <div class="form-group">
+    <label>Created By</label>
+    <input type="text" class="form-control" name="createdBy" [(ngModel)]="invoice.createdBy" required>
+  </div>
+
+  <div class="form-group">
+    <label>Email</label>
+    <input type="text" class="form-control" name="email" [(ngModel)]="invoice.email" required>
+  </div>
+
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" name="name" [(ngModel)]="invoice.name" required>
+  </div>
+
+  <div class="form-group">
+    <label>paymentMethod</label>
+    <input type="text" class="form-control" name="paymentMethod" [(ngModel)]="invoice.paymentMethod" required>
+  </div>
+
+  <div class="form-group">
+    <label>totalAmount</label>
+    <input type="text" class="form-control" name="totalAmount" [(ngModel)]="invoice.totalAmount" required>
+  </div>
+
+  <div class="form-group">
+    <label>UUID</label>
+    <input type="text" class="form-control" name="uuid" [(ngModel)]="invoice.uuid" required>
+  </div>
+
+  <div class="form-group">
+    <button class="btn btn-danger btn-block" (click)="edit(invoice)">Save</button>
+    <button class="btn btn-info btn-block" routerLink="/list-invoices">Back</button>
+  </div>
+</form>
+

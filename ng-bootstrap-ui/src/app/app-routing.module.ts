@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'list-products', component: ListProductsComponent},
   { path: 'manage-product/:productId', component: ManageProductComponent},
   { path: 'list-invoices', component: ListInvoicesComponent},
-  { path: 'manage-invoice/:regionId', component: ManageInvoiceComponent}
+  { path: 'manage-invoice/:invoiceId', component: ManageInvoiceComponent}
 ];
 
 @NgModule({
