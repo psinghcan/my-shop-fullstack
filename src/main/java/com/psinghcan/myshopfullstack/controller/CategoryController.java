@@ -9,6 +9,7 @@ import lombok.NonNull;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.Callable;
 import java.util.stream.Collectors;
 
@@ -32,6 +33,13 @@ public class CategoryController {
                 .collect(Collectors.toList());
     }
 
+    @GetMapping("/{id}")
+    public CategoryDto getCategoryById(@PathVariable Integer id) {
+        return categoryRepository.findById(id)
+                .map(categoryMapper::toDto)
+                .orElseThrow(() -> new IllegalArgumentException("Category with id " + id + " not found"));
+    }
+
     @GetMapping("/find{name}")
     public List<CategoryDto> findByName(@PathVariable String name) {
         return categoryRepository.findByNameIgnoreCase(name)
@@ -45,11 +53,16 @@ public class CategoryController {
         return categoryMapper.toDto(categoryRepository.save(categoryMapper.toEntity(categoryDto)));
     }
 
-    @PostMapping("/update")
-    public CategoryDto updateCategory(@RequestBody @NonNull CategoryDto categoryDto) {
+    @PutMapping("/{id}")
+    public CategoryDto updateCategory(
+            @PathVariable Integer id,
+            @Valid @RequestBody @NonNull CategoryDto categoryDto) {
 
         if (categoryDto.getId() == null) {
             throw new IllegalArgumentException("Category id cannot be null");
+        }
+        if (!Objects.equals(id, categoryDto.getId())) {
+            throw new IllegalArgumentException("Incorrect category id; not matching with the passed category");
         }
         Category category = categoryRepository.findById(categoryDto.getId())
                 .orElseThrow(() -> new IllegalArgumentException("Category with id " + categoryDto.getId() + " not found"));

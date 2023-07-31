@@ -14,6 +14,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import {HttpClientModule} from "@angular/common/http";
 import { ToastComponent } from './components/toast/toast.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ToastComponent } from './components/toast/toast.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
