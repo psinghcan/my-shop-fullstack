@@ -1,1 +1,23 @@
-<p>list-products works!</p>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Id</th>
+    <th scope="col">Name</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let product of products">
+
+    <td>
+      {{ product.id }}
+    </td>
+    <td>
+      {{ product.name }}
+    </td>
+    <td class="action-link">
+      <button routerLink='/manage-product/{{product.id}}'  class="btn btn-info">Manage</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

@@ -11,6 +11,7 @@ import lombok.NonNull;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 @RestController
@@ -22,6 +23,13 @@ public class ProductController {
     public ProductController(ProductRepository productRepository, ProductMapper productMapper) {
         this.productRepository = productRepository;
         this.productMapper = productMapper;
+    }
+
+    @GetMapping("/{id}")
+    public ProductDto getProductById(@PathVariable Integer id) {
+        return productRepository.findById(id)
+                .map(productMapper::toDto)
+                .orElseThrow(() -> new IllegalArgumentException("Product with id " + id + " not found"));
     }
 
     @GetMapping("")
@@ -48,15 +56,20 @@ public class ProductController {
                 .collect(Collectors.toList());
     }
 
-    @PostMapping("/new")
-    public ProductDto saveCategory(@RequestBody @NonNull @Valid ProductDto productDto) {
+    @PostMapping("")
+    public ProductDto saveProduct(@RequestBody @NonNull @Valid ProductDto productDto) {
         return productMapper.toDto(productRepository.save(productMapper.toEntity(productDto)));
     }
 
-    @PostMapping("/update")
-    public ProductDto updateProduct(@RequestBody @NonNull @Valid ProductDto dto) {
+    @PutMapping("/{id}")
+    public ProductDto updateProduct(
+            @PathVariable Integer id,
+            @RequestBody @NonNull @Valid ProductDto dto) {
         if (dto.getId() == null) {
             throw new IllegalArgumentException("Product id cannot be null");
+        }
+        if (!Objects.equals(id, dto.getId())) {
+            throw new IllegalArgumentException("Incorrect product id; not matching with the passed product");
         }
         Product product = productRepository.findById(dto.getId())
                 .orElseThrow(() -> new IllegalArgumentException("Category with id " + dto.getId() + " not found"));
